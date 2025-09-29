@@ -16,6 +16,12 @@ EXPLib is an open-source research library built to accelerate the deployment of 
 
 Beyond simply providing algorithms, EXPLib provides how to use explainability artifacts to support relevant activities in **AI‑FSM (Artificial Intelligence‑Functional Safety Management) lifecycle**.  This ensures that DL related artifact (model, data) is transparent, traceable, and compliant with AI-FSM process, and in turns to other safety and regulatory standards (IEC61508, ISO 26262, ISO 21448,...). 
 
+## What is inside
+
+[Example usages with AI-FSM](Place_holder)
+
+[Explainable AI methods and library](XAI_SoA.md)
+
 ## Disclaimer: The use of open-source software in EXPLib
 
 EXPLib itself is released under the GNU license, however the library **does not include its own full stack of dependencies**.  Instead, it pulls in a diverse ecosystem of open-source projects. When you build, extend, or deploy EXPLib, you are automatically adopting those projects and, consequently, their respective licenses, stability guarantees, and security postures.
