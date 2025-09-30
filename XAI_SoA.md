@@ -66,10 +66,10 @@ We refer to these methods as “data explainers” within this document.
 
 | Method | Purpose | Examples |
 |------------|------|--|
-| **Data Readiness Levels (DRL)**  | Structured assessment of data quality | [Kirk et al., 2020](https://www.nasa.gov/mission_pages/ames/people/engineering/Data_Readiness_Levels.html) |
-| **Datasheets for Datasets**   | Structured documentation | [Gebru et al., 2018](https://arxiv.org/abs/1908.07832) |
-| **Dataset Nutrition Labels**  | Transparency on bias & missingness |[Kleiner et al., 2020](https://arxiv.org/abs/2002.02879) |
-| **Data Declarations for NLP**  | Record dataset properties | [Zhang et al., 2021](https://arxiv.org/abs/2106.07623) |
+| **Data Readiness Levels (DRL)**  | Structured assessment of data quality |  |
+| **Datasheets for Datasets**   | Structured documentation |  |
+| **Dataset Nutrition Labels**  | Transparency on bias & missingness | |
+| **Data Declarations for NLP**  | Record dataset properties |  |
 | **Data Prototype and Criticism** | Unsupervised search for prototypes and criticisms  | [ProtoDash](https://ai-explainability-360.org/), [MMD-critic](https://github.com/BeenKim/MMD-critic) |
 
 
@@ -100,8 +100,8 @@ We refer to these methods as “data explainers” within this document.
 |--------|------------------------|---------------|
 | **Activation/Gradient‑based** |Utilize gradients of the model output with respect to input data to assign importance scores and propagate them back to individual features| [Saliency](https://arxiv.org/abs/1312.6034), [Integrated Gradients](https://dl.acm.org/doi/10.5555/3305890.3306024), [Grad‑CAM](https://ieeexplore.ieee.org/document/8237336), [DeepLIFT](https://github.com/kundajelab/deeplift), [SmoothGrad](https://arxiv.org/abs/1706.03825) | 
 | **Perturbation‑based** |Assess feature importance by perturbing the input data and analysing the resulting changes in model predictions| [LIME](https://github.com/marcotcr/lime), [SHAP](https://github.com/shap/shap), [Anchors](https://doi.org/10.1609/aaai.v32i1.11491), [RISE](https://github.com/eclique/RISE), [Counterfactuals](https://arxiv.org/abs/1711.00399) | 
-| **Representation‑based** |Provide insights into the model's internal workings by learning interpretable and disentangled representations| TCAV, beta‑VAE, ProtoPNet | 
-| **Graph & Visualization** |Visualize relationships between features and model outputs using graphs| PDP, ALE, t‑SNE, UMAP, Inceptionism | 
+| **Representation‑based** |Provide insights into the model's internal workings by learning interpretable and disentangled representations| [TCAV](https://github.com/soumyadip1995/TCAV), [beta‑VAE](https://openreview.net/forum?id=Sy2fzU9gl), [ProtoPNet](https://dl.acm.org/doi/10.5555/3454287.3455088) | 
+| **Graph & Visualization** |Visualize relationships between features and model outputs using graphs| [PDP](https://scikit-learn.org/stable/modules/partial_dependence.html), [ALE](https://doi.org/10.1111/rssb.12377), [t‑SNE](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html), [UMAP](https://github.com/lmcinnes/umap), [Inceptionism](https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html) | 
 
 ---
 
@@ -109,9 +109,9 @@ We refer to these methods as “data explainers” within this document.
 
 | Method | Purpose | Examples |
 |--------|------------------------|---------------|
-| **Influence tracing** |Aim to understand the model's structure and decision-making process via tracing the influence scores through the network| LRP, Deep Taylor, Spectral Relevance | 
-| **Concept & Feature Analysis** |Focus on analysing and understanding the features and concepts learned by the model| Concept Relevance Propagation, Decision‑boundary visualisation | 
-| **Disentanglement** |Aim to disentangle the extracted feature representations in a lower-dimensional feature space| PCA, Isomap, beta‑VAE, NMF | 
+| **Influence tracing** |Aim to understand the model's structure and decision-making process via tracing the influence scores through the network| [LRP](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140), [Deep Taylor](https://doi.org/10.1016/j.patcog.2016.11.008), [Spectral Relevance](https://doi.org/10.1038/s41467-019-08987-4) | 
+| **Concept & Feature Analysis** |Focus on analysing and understanding the features and concepts learned by the model| [Concept Relevance Propagation](https://doi.org/10.1038/s42256-023-00711-8), [Decision‑boundary visualisation](https://doi.org/10.48550/arXiv.1904.08939) | 
+| **Disentanglement** |Aim to disentangle the extracted feature representations in a lower-dimensional feature space| [PCA](https://doi.org/10.1080/14786440109462720), [Isomap](https://doi.org/10.1126/science.290.5500.2319), [beta‑VAE](https://openreview.net/forum?id=Sy2fzU9gl), [NMF](https://dl.acm.org/doi/10.5555/248979), [SVD](https://dl.acm.org/doi/10.5555/248979), [LLE](https://doi.org/10.1126/science.290.5500.2323) | 
 
 ---
 
