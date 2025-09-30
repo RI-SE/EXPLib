@@ -2,7 +2,6 @@
 # Groundtruth assume positive values for all entries found
 # Examples json are identical except that one item is added to predictions
 # TODO: Fix error for AP computations (sorting of classes and AP curve)
-# Convert into library, with no main function
 
 
 import json
