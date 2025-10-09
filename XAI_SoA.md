@@ -165,7 +165,7 @@ We refer to these methods as “data explainers” within this document.
 |--------|------------------------|---------------|
 | **Attention mechanisms** |Learn to assign different weights to different elements, highlighting those that contribute most to the task| [GALA](https://doi.org/10.48550/arXiv.1805.08819), [DomainNet](https://doi.ieeecomputersociety.org/10.1109/CVPR.2015.7298685), [Residual Attention](https://doi.org/10.1109/CVPR.2017.683), [Loss-based attention](https://doi.org/10.1109/TIP.2020.3046875), [D-Attn](https://doi.org/10.1145/3109859.3109890) | 
 | **Autoencoders-based representation** | The latent space can be analysed to understand which features are most important for encoding the input.| [Explainer models](https://ui.adsabs.harvard.edu/link_gateway/2018arXiv180507468Z/doi:10.48550/arXiv.1805.07468), [XCNN](https://doi.org/10.48550/arXiv.2007.06712) | 
-|**Others**|Enhance representations| [Adaptive DeConv](https://doi.org/10.1109/ICCV.2011.6126474), [Deep Fuzzy Classifier](https://doi.org/10.1109/TFUZZ.2019.2946520), [Network In Network]([NIN](https://doi.org/10.48550/arXiv.1312.4400)) |
+|**Others**|Enhance representations| [Adaptive DeConv](https://doi.org/10.1109/ICCV.2011.6126474), [Deep Fuzzy Classifier](https://doi.org/10.1109/TFUZZ.2019.2946520), [Network In Network](https://doi.org/10.48550/arXiv.1312.4400) |
 
 ---
 
