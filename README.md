@@ -7,7 +7,8 @@ EXPLib – A library for explainable and dependable DL components
 - Domain: Agnostic 
 - Keywords: deep learning, explainable AI, computer vision, functional safety
 - Responsible unit at RISE: Digital Systems/Mobility and Systems/Human Centered AI
-- Related research projects: SAFEXPLAIN
+- Contributors: [RISE](https://www.ri.se/en) (main contributor), [Ikerlan](https://www.ikerlan.es/en), [AIKO](https://aikospace.com/)
+- Related research projects: [SAFEXPLAIN](https://safexplain.eu/)
 - License: [GPL3-0](https://github.com/RI-SE/EXPLib/blob/main/LICENSE)
 
 ## Description
