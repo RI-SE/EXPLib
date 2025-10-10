@@ -1,13 +1,13 @@
 import torch
 import torch.nn as nn
-import torchvision.models.detection
 import torchvision
-from torchvision.models.detection.transform import GeneralizedRCNNTransform
 from typing import List, Dict, Optional, Tuple
 from collections import OrderedDict
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+import seaborn as sns
 
 class SSDWithDropout(nn.Module):
     def __init__(self, base_ssd, dropout_prob=0.3):
@@ -273,5 +273,51 @@ def predict_with_parallel_models(models, inputs, n_iter=10):
     return {
         'bbox_mean': bbox_mean,  # Mean bboxes
         'bbox_std': bbox_std,  # Std of bboxes
+        'bbox_all': all_boxes_tensor,
         'bbox_CI95': (bbox_CI95_lower, bbox_CI95_upper)  # Tensors with lower and upper CI bounds
     }
+
+
+def plot_image_with_bboxes(image_tensor, bbox_CI95, bbox_mean):
+
+    image = image_tensor[0, 0].numpy()
+    plt.figure(figsize=(6, 6))
+    plt.imshow(image, cmap='gray')
+    plt.axis('off')
+    
+    ci_lower, ci_upper = bbox_CI95
+
+    rect_ci95_lower = Rectangle(
+        (ci_lower[0], ci_lower[1]),  # Top-left corner (x1, y1)
+        ci_lower[2] - ci_lower[0],  # Width
+        ci_lower[3] - ci_lower[1],  # Height
+        linewidth=2, edgecolor='green', facecolor='none', label='CI95_lower'
+    )
+    plt.gca().add_patch(rect_ci95_lower)
+    
+    rect_ci95_upper = Rectangle(
+        (ci_upper[0], ci_upper[1]),  # Top-left corner (x1, y1)
+        ci_upper[2] - ci_upper[0],  # Width
+        ci_upper[3] - ci_upper[1],  # Height
+        linewidth=2, edgecolor='blue', facecolor='none', label='CI95_upper'
+    )
+    plt.gca().add_patch(rect_ci95_upper)
+    plt.legend()
+    plt.show()
+
+
+# Plot the PDFs for bbox parameters
+def plot_bbox_pdfs(all_boxes_tensor):
+    params = ['x1', 'y1', 'x2', 'y2']
+    plt.figure(figsize=(12, 6))
+    
+    for i, param in enumerate(params):
+        plt.subplot(1, 4, i + 1)
+        sns.kdeplot(all_boxes_tensor[:, i].numpy(), fill=True, color='blue')
+        plt.title(f'PDF of {param}')
+        plt.xlabel(param)
+        plt.ylabel('Density')
+    
+    plt.tight_layout()
+    plt.show()
+
