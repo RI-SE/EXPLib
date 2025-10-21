@@ -21,7 +21,7 @@ Beyond simply providing algorithms, EXPLib provides how to use explainability ar
 
 [Approach](approach.md)
 
-[Example usages with AI-FSM](Place_holder)
+[Example usages with AI-FSM](aifsm_phases/README.md)
 
 [Explainable AI methods and library](XAI_SoA.md)
 
