@@ -4,14 +4,16 @@ EXPLib implements a structured, SOTIF-aligned uncertainty management workflow fo
 The goal is to keep the system safely inside the **Known / Not Hazardous** space while continuously monitoring and mitigating all relevant uncertainties.
 
 ## Table of Contents
+- [Uncertainty Management for Safety‑Critical Deep Learning](#uncertainty-management-for-safetycritical-deep-learning)
+  - [Table of Contents](#table-of-contents)
 - [Uncertainty management strategy](#uncertainty-management-strategy)
-- [Uncertainty management recommendations](#uncertainty-management-recommendations)
-  - [Reduction of uncertainties within the development lifecycle](#reduction-of-uncertainties-within-the-development-lifecycle)
+- [Uncertainty management practical approaches](#uncertainty-management-practical-approaches)
+  - [Reduction of uncertainties within the AI-FSM compliant development lifecycle](#reduction-of-uncertainties-within-the-ai-fsm-compliant-development-lifecycle)
     - [Reduction of domain uncertainty](#reduction-of-domain-uncertainty)
     - [Reduction of model epistemic uncertainty](#reduction-of-model-epistemic-uncertainty)
     - [Logging of aleatoric uncertainty](#logging-of-aleatoric-uncertainty)
   - [Management of residual uncertainty within Operation and Monitoring stage](#management-of-residual-uncertainty-within-operation-and-monitoring-stage)
-    - [Management of data/model epistemic uncertainty](#management-of-data-model-epistemic-uncertainty)
+    - [Management of data/model epistemic uncertainty](#management-of-datamodel-epistemic-uncertainty)
     - [Management of aleatoric uncertainty](#management-of-aleatoric-uncertainty)
 
 ---
@@ -100,3 +102,7 @@ The aleatoric uncertainty‑aware model will be integrated into the OM safety ar
 - **Defining safe limits for system operation**: The aleatoric uncertainty‑aware model will help establish safe limits for the system, where:
   - Prediction variations within predefined boundaries can be tolerated and used by the decision‑making component.
   - The system’s operating range is defined, ensuring that predictions are reliable and trustworthy, even in the presence of uncertainty.
+
+---
+
+← [Back to **EXPLib Introduction**](README.md)

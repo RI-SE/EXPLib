@@ -78,3 +78,5 @@ Data descriptors provide a structured way to summarize dataset characteristics, 
 | **Boundary reporting** | Defines limits between in‑distribution and out‑of‑distribution data, mapping areas where the model may struggle to generalize and ensuring reliable, interpretable decision‑making. |
 
 ---
+
+← [Back to **Example usages in AI-FSM**](../README.md)
