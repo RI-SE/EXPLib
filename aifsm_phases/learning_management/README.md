@@ -106,4 +106,20 @@ Expected model behaviours shall be logged, and used as known safe boundaries. Th
 | **In-distribution activation patterns** | Analysing the model's internal workings and identifying typical activation patterns for in-distribution data. | 
 ---
 
+
+## Example notebooks
+
+
+| Category | Example notebooks |
+|-----------------|--------------|
+| **Feature importance** | [PhLM LIME superpixel](PhLM_Toymodel_LIME_Superpixel.ipynb), [PhLM SHAP superpixel](PhLM_Toymodel_SHAP_Superpixel.ipynb), [PhLM ALE/PDP](PhLM_Learning_Verification_Toymodel_ALEPDP.ipynb) |
+| **Saliency map** |[PhLM MVP CAM](PhLM_Learning_Verification_Toymodel_CAM.ipynb), [PhLM YOLO CAM](PhLM_Learning_Verification_YOLOCAM.ipynb) |
+| **Feature extractor** |[PhLM Neuron activation pattern](PhLM_Learning_Verification.ipynb) |
+| **Correlation analysis** |[PhLM Model performance analysis](PhLM_Learning_Performance_vs_Inputs.ipynb) |
+| **Uncertainty estimator** |[PhLM Model uncertainty estimation](PhLM_Design_Toymodel_MC.ipynb) |
+
+
+
+---
+
 ← [Back to **Example usages in AI-FSM**](../README.md)

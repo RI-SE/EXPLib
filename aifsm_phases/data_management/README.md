@@ -79,4 +79,17 @@ Data descriptors provide a structured way to summarize dataset characteristics, 
 
 ---
 
+## Example notebooks
+
+
+
+
+| Category | Example notebooks |
+|-----------------|--------------|
+| **Data profiling** | [PhDM Data profiling](PhDM_DataPreparation_Profiling.ipynb), [PhDM Dataset distances](PhDM_DataPreparation_Dataset_Distances.ipynb) |
+| **Data descriptors** | [PhDM Data descriptor anomalies](PhDM_DataVerification_Descriptor_Anomalies.ipynb), [PhDM Data descriptor latentspace analysis](PhDM_DataVerification_Descriptor_Latentspace_Analysis.ipynb) |
+| **Data prototypes** |[PhDM Data prototypes](PhDM_Data_Prototypes.ipynb) |
+
+---
+
 ← [Back to **Example usages in AI-FSM**](../README.md)
