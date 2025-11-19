@@ -31,4 +31,19 @@ To verify that the inference process remains transparent and trustworthy, variou
 - **Prototype-based verification**, ensuring that the model’s inferences align with known, representative samples rather than relying on spurious correlations.
 - **Saliency maps**, which highlight the most important regions in input data that contribute to the model’s decision-making. By visualizing which areas of an image, text, or structured data impact predictions, saliency maps provide insights into the reasoning process and help detect cases where models rely on unintended or misleading features.
 
+---
+## Example notebooks
+
+In addition to the common methods described in [PhLM](../learning_management/README.md), the following notebooks focus on enabling scenario-based V&V activities
+
+| Category | Example notebooks |
+|-----------------|--------------|
+| **Performance distribution** | [PhIM Performance assessment](PhIM_-_Performance_Assessment.ipynb) |
+| **Search based testing** |[PhIM Search-based testing](PhIM_Search_based_Testings.ipynb)|
+| **Structural coverage** |[PhIM Structural coverage](PhIM_Structural_Coverage.ipynb) |
+
+
+
+---
+
 ← [Back to **Example usages in AI-FSM**](../README.md)
