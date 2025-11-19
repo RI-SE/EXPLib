@@ -38,7 +38,7 @@ In addition to the common methods described in [PhLM](../learning_management/REA
 
 | Category | Example notebooks |
 |-----------------|--------------|
-| **Performance distribution** | [PhIM Performance assessment](PhIM_-_Performance_Assessment.ipynb) |
+| **Performance distribution** | [PhIM Performance assessment](PhIM_Performance_Assessment.ipynb) |
 | **Search based testing** |[PhIM Search-based testing](PhIM_Search_based_Testings.ipynb)|
 | **Structural coverage** |[PhIM Structural coverage](PhIM_Structural_Coverage.ipynb) |
 
