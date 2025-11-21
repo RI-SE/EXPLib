@@ -2,9 +2,7 @@ import json
 import pandas as pd
 import numpy as np
 
-def compute_metrics(groundtruth_json = "toymodel_output_for_ensemble.json"):
-    with open(groundtruth_json, "r") as file: 
-        json_data = json.load(file)
+def compute_metrics(json_data):
     areas = []
     bbox_ratios = []
     anomaly_scores = {"input": [], "output": [], "model": []}
@@ -102,6 +100,41 @@ def toymodel_ensemble(new_item, metrics, z_threshold=2.0):
         "anomalies": anomalies,  # Details of where the anomalies are
     }
 
+
+def assess_anomaly(new_item, metrics, z_threshold=2.0):
+    # Extract bbox features
+    bbox = new_item["bbox"]
+    width = bbox[2] - bbox[0]
+    height = bbox[3] - bbox[1]
+    area = width * height
+    bbox_ratio = min(width, height) / max(width, height)
+
+    # Compute z-scores for anomaly scores
+    anomaly_scores = new_item["anomaly_scores"]
+    z_scores = {
+        "input": (anomaly_scores["input"] - metrics["input"]["mean"])
+        / metrics["input"]["std"],
+        "output": (anomaly_scores["output"] - metrics["output"]["mean"])
+        / metrics["output"]["std"],
+        "model": (anomaly_scores["model"] - metrics["model"]["mean"])
+        / metrics["model"]["std"],
+        "area": (area - metrics["areas"]["mean"]) / metrics["areas"]["std"],
+        "bbox_ratio": (bbox_ratio - metrics["bbox_ratio"]["mean"])
+        / metrics["bbox_ratio"]["std"],
+    }
+
+    # Identify anomalies (features where |z| > z_threshold)
+    anomalies = {feature: z for feature, z in z_scores.items() if abs(z) > z_threshold}
+
+    # Assess overall anomaly
+    is_anomalous = len(anomalies) > 0
+
+    return {
+        "z_scores": z_scores,
+        "is_anomalous": is_anomalous,
+        "anomalies": anomalies,  # Details of where the anomalies are
+    }
+
 def example_run_code (new_item, groundtruth_json = "data/toymodel_output_for_ensemble.json"):
     ## this should only be loaded once outside of threading
     metrics, _ = compute_metrics(groundtruth_json)
@@ -110,3 +143,4 @@ def example_run_code (new_item, groundtruth_json = "data/toymodel_output_for_ens
     result = toymodel_ensemble(new_item, metrics)
     print(result)
     return result
+
